@@ -14,8 +14,16 @@ public class double_hash <K extends Number, V, T> {
         mp1.put(key, value);
 
     }
+    public void removeFirst (K key, V value){
+        mp1.remove(key, value);
+
+    }
     public void addSecond(K key, T value){
         mp2.put(key, value);
+
+    }
+    public void removeSecond(K key, T value){
+        mp2.remove(key, value);
 
     }
 
