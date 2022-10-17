@@ -30,9 +30,4 @@ public class double_hash <K extends Number, V, T> {
 
 
 
-
-
-
-
-
 }
