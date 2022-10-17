@@ -1,4 +1,4 @@
-package PackageProyect;
+package TPOblig2.PackageProyect;
 
 import java.util.HashMap;
 
