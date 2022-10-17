@@ -1,4 +1,4 @@
-package exceptions;
+package pil;
 
 public class ExistingKeyExc extends Exception {
     private String message;
