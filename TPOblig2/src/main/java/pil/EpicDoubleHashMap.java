@@ -1,10 +1,12 @@
 package pil;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class EpicDoubleHashMap<K extends Number, V, T> {
-    HashMap<K,V> firstType;
-    HashMap<K,T> secondType;
+    private HashMap<K,V> firstType;
+    private HashMap<K,T> secondType;
 
     public EpicDoubleHashMap(){
         firstType = new HashMap<>();
@@ -37,7 +39,14 @@ public class EpicDoubleHashMap<K extends Number, V, T> {
         return this.secondType;
     }
 
-    // public EpicDoubleHashMap<K,T,V> getThirdType(){}
+    public ArrayList getThirdType(){
+        ArrayList list = new ArrayList();
+        HashMap has = this.firstType;
+        list.add(getFirstType().get(3));
+        list.add(getSecondType().get(3));
+        return list;
+
+    }
     //TODO
 
 }

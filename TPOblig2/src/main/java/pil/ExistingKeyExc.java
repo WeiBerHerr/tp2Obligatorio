@@ -1,6 +1,6 @@
 package pil;
 
-public class ExistingKeyExc {
+public class ExistingKeyExc extends Exception {
     private String message;
 
     public ExistingKeyExc(){
