@@ -1,4 +1,4 @@
-package pil;
+package exceptions;
 
 public class NonexistentKeyExc extends Exception{
     private String message;

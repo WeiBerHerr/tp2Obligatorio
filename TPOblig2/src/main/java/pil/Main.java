@@ -1,7 +1,5 @@
 package pil;
 
-import java.util.HashMap;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -11,10 +9,9 @@ public class Main {
         map.addSecondType(2, 7);
         map.addThirdType(3,"TestString",299);
 
-        HashMap<Integer,String> hashMapFirstType = map.getFirstType();
+        System.out.println(map.getValueFirstType(1));
+        System.out.println(map.getValueSecondType(2));
+        map.getValuesThirdType(3);
 
-        System.out.println(map.getFirstType());
-        System.out.println(map.getSecondType());
-        System.out.println(map.getThirdType());
     }
 }
