@@ -13,7 +13,10 @@ public class Main {
         //Add an item to second type hashmap
         map.addSecondType(2, 15);
         //Tries to add an existent key to second type hashmap.
+        map.addSecondType(4, 76);
+        map.addSecondType(7, 76);
         map.addSecondType(2, 76);
+
 
         //Add an item to third type hashmap
         map.addThirdType(3,"TestString",299);
@@ -47,5 +50,6 @@ public class Main {
 
         map.addSecondType(6,5);
         System.out.println(map.valuesCounter());
+        System.out.println(map.isRepmap());
     }
 }

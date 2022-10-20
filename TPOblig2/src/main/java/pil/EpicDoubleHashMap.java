@@ -3,13 +3,19 @@ package TPOblig2.src.main.java.pil;
 import TPOblig2.src.main.java.exceptions.ExistingKeyExc;
 import TPOblig2.src.main.java.exceptions.NonexistentKeyExc;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class EpicDoubleHashMap<K extends Number, V, T> {
     private HashMap<K, V> firstType;
     private HashMap<K, T> secondType;
+
     private int vValueCounter;
     private int tValueCounter;
+    private ArrayList <V> valueCounterV = new ArrayList<>();
+    private ArrayList <T> valueCounterT = new ArrayList<>();
+
+    private boolean repmap ;
 
     public EpicDoubleHashMap() {
         firstType = new HashMap<>();
@@ -23,6 +29,7 @@ public class EpicDoubleHashMap<K extends Number, V, T> {
             if (firstType.containsKey(key)) {
                 throw new ExistingKeyExc();
             }
+            valueCounterV.add(value);
             firstType.put(key, value);
             vValueCounter++;
         } catch (ExistingKeyExc e) {
@@ -35,6 +42,7 @@ public class EpicDoubleHashMap<K extends Number, V, T> {
             if (secondType.containsKey(key)) {
                 throw new ExistingKeyExc();
             }
+            valueCounterT.add(value);
             secondType.put(key, value);
             tValueCounter++;
         } catch (ExistingKeyExc e) {
@@ -127,6 +135,34 @@ public class EpicDoubleHashMap<K extends Number, V, T> {
         return resultMessage;
     }
 
+    public boolean isRepmap() {
+        return repmap;
+    }
 
+    private void setRepmap(boolean repmap) {
+        this.repmap = repmap;
+    }
 
+    public void rMap(){
+
+        for (int i =0 ; i<valueCounterT.size(); i++ ) {
+            int counteres = 0;
+            T vari ;
+            vari = valueCounterT.get((Integer) i);
+
+            for (int k = i + 1; k<valueCounterT.size(); k++ ) {
+                    if (vari ==  valueCounterT.get((Integer) k+1)){
+                        counteres ++;
+                    }
+            }
+            if (counteres != 0) {
+                repmap =  true;
+                }
+            else  {
+                repmap = false;
+
+            }
+        }
+
+    }
 }
