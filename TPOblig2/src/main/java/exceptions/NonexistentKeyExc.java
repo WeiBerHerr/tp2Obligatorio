@@ -1,4 +1,4 @@
-package exceptions;
+package TPOblig2.src.main.java.exceptions;
 
 public class NonexistentKeyExc extends Exception{
     private String message;
