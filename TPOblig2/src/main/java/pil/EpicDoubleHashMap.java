@@ -1,7 +1,7 @@
 package TPOblig2.src.main.java.pil;
 
-import exceptions.ExistingKeyExc;
-import exceptions.NonexistentKeyExc;
+import TPOblig2.src.main.java.exceptions.ExistingKeyExc;
+import TPOblig2.src.main.java.exceptions.NonexistentKeyExc;
 
 import java.util.HashMap;
 
