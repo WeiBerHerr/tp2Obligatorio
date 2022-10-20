@@ -143,6 +143,4 @@ public class EpicDoubleHashMap<K extends Number, V, T> {
         }
         return valueCounter;
     }
-
-
 }
