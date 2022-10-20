@@ -1,18 +1,15 @@
-package TPOblig2.src.main.java.exceptions;
+package exceptions;
 
-public class ExistingKeyExc extends java.lang.Exception {
-    private String message = "ya existe este key, agregue otro";
-
-    public ExistingKeyExc(){
-        this.message = message;
-    }
+public class ExistingKeyExc extends Exception {
+    private String message;
 
     public String getMessage() {
         return message;
     }
 
-    public void printStackTrace(String message) {
-
-
+    public ExistingKeyExc(){
+        this.message = "The key already exists.";
     }
+
+
 }
