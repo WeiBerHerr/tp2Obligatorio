@@ -1,7 +1,8 @@
-package pil;
+package TPOblig2.src.main.java.pil;
 
 import Models.Cat;
 import Models.Dog;
+import TPOblig2.src.main.java.pil.EpicDoubleHashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -75,6 +76,6 @@ public class Main {
         System.out.println("---------------------------------");
         System.out.println("Trigger nonexistent value exception:");
         map.getValueFirstType(45);
-
+        System.out.println(map.repMap());
     }
 }

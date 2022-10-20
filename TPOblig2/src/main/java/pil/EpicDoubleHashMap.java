@@ -1,8 +1,7 @@
-package pil;
-
-import exceptions.ExistingKeyExc;
-import exceptions.NonexistentKeyExc;
-import exceptions.NonexistentValueExc;
+package TPOblig2.src.main.java.pil;
+import TPOblig2.src.main.java.exceptions.ExistingKeyExc;
+import TPOblig2.src.main.java.exceptions.NonexistentValueExc;
+import TPOblig2.src.main.java.exceptions.NonexistentKeyExc;
 
 import java.util.HashMap;
 
@@ -11,6 +10,7 @@ public class EpicDoubleHashMap<K extends Number, V, T> {
     private HashMap<K, T> secondType;
     private int vValueCounter;
     private int tValueCounter;
+    private boolean flag = false;
 
     public EpicDoubleHashMap() {
         firstType = new HashMap<>();
@@ -143,6 +143,22 @@ public class EpicDoubleHashMap<K extends Number, V, T> {
         }
         return valueCounter;
     }
+    // This method gives true when it finds 2 or more equal values in the map
+    public boolean repMap(){
+        for (V valueMa :firstType.values()){
+            if (firstType.containsValue(valueMa)){
+                flag = true;
 
+            }
+        }
+
+        for (T valueMa :secondType.values()){
+            if (secondType.containsValue(valueMa)){
+                flag = true;
+
+            }
+        }
+        return flag;
+    }
 
 }
