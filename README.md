@@ -1,2 +1,3 @@
 # tp2Obligatorio
-Este es el tp de pill autores Enzo y Ruben
+PIL Project "TP Obligatorio 2".
+Ruben Blanco - Enzo Maldonado.
